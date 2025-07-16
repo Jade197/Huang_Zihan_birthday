@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>给 黄孜涵 的生日惊喜！</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 背景音乐播放器 -->
+    <div class="music-player">
+        <audio id="bg-music" src="music/bgm.mp3" loop></audio>
+        <button id="music-toggle-btn">🎵 播放音乐</button>
+    </div>
+
+    <!-- 主容器 -->
+    <div class="container">
+
+        <!-- 首页 -->
+        <div id="home-page" class="page active">
+            <h1 class="title">黄孜涵，生日快乐！</h1>
+            <p class="subtitle">羊村全体成员邀请你参加一个特别的生日派对！希望这个小惊喜能让你开心~</p>
+            <div class="button-group">
+                <button id="show-id-btn" class="btn btn-smart-blue">🌟 羊村居民的许愿星</button>
+                <button id="show-blessing-btn" class="btn btn-pink">💌 一份来自美羊羊的祝福</button>
+                <button id="show-game-btn" class="btn btn-blue">🎁 灰太狼大王的神秘宝藏</button>
+            </div>
+            <!-- 新创意：隐藏彩蛋按钮 -->
+            <button id="secret-btn" class="btn back-btn" style="margin-top: 20px; font-size: 0.8em; opacity: 0.7;">小纸条</button>
+            <p id="secret-message" style="display: none; margin-top: 10px; color: #ff69b4;">嘿，是哪位最可爱的小朋友过生日呀？当然是你！新的一岁，一起开心吧！</p>
+        </div>
+
+        <!-- 身份证页面 -->
+        <div id="id-card-page" class="page">
+            <div class="card">
+                <h2>恭喜你！获得羊村居民认证！</h2>
+                <div class="id-card">
+                    <div class="id-header">青青草原 羊村居民身份证</div>
+                    <div class="id-body">
+                        <div class="id-info">
+                            <p><strong>姓 名:</strong> <span class="info-text">黄孜涵</span></p>
+                            <p><strong>性 别:</strong> <span class="info-text">女</span></p>
+                            <p><strong>民 族:</strong> <span class="info-text">羊族</span></p>
+                            <p><strong>生 日:</strong> <span class="info-text">2006年7月21日</span></p>
+                            <p><strong>住 址:</strong> <span class="info-text">青青草原羊村最美的小屋</span></p>
+                        </div>
+                    </div>
+                    <div class="id-footer">
+                        <p><strong>签发机关:</strong> 羊村村委会</p>
+                        <p><strong>有效期限:</strong> 永远有效</p>
+                    </div>
+                </div>
+                <button id="go-to-wish-btn" class="btn btn-wish">凭此证件去许愿</button>
+            </div>
+            <button class="back-btn">返回首页</button>
+        </div>
+
+        <!-- 许愿页面 -->
+        <div id="wish-page" class="page">
+            <img src="images/xiyangyang.png" alt="喜羊羊" class="char-image">
+            <div class="card">
+                <h2>向喜羊羊许个愿吧！</h2>
+                <p>作为羊村最闪亮的星，你的愿望值得被听见。快告诉喜羊羊吧，他总有办法帮你实现！</p>
+                <form id="wish-form" action="https://formspree.io/f/xyzpygqq" method="POST">
+                    <textarea id="wish-input" name="wish" placeholder="请在这里写下你的愿望..."></textarea>
+                    <button type="submit" id="submit-wish-btn" class="btn btn-wish">发射我的愿望！</button>
+                </form>
+                <p id="wish-feedback" class="feedback-text"></p>
+            </div>
+            <button class="back-btn">返回首页</button>
+        </div>
+
+        <!-- 祝福页 -->
+        <div id="blessing-page" class="page">
+            <img src="images/meiyangyang.png" alt="美羊羊" class="char-image">
+            <div class="card">
+                <h2>最真挚的祝福</h2>
+                <p>亲爱的黄孜涵，</p>
+                <p>生日快乐呀！愿你永远像喜羊羊一样聪明机智，像美羊羊一样美丽动人，像沸羊羊一样热情开朗，更要像懒羊羊一样，吃嘛嘛香，无忧无虑！</p>
+                <p>新的一岁，愿美好和幸运都奔你而来，愿你眼里的星星，永远闪亮！永远支持你~</p>
+                <p class="signature">王佳乐</p>
+            </div>
+            <button class="back-btn">返回首页</button>
+        </div>
+
+        <!-- 游戏页 -->
+        <div id="game-page" class="page">
+            <img src="images/wolf.png" alt="灰太狼" class="char-image-small">
+            <div class="card">
+                <h2>灰太狼的挑战</h2>
+                <p>"想打开我的宝藏吗？先念对咒语吧！哇哈哈哈哈！"</p>
+                <img id="treasure-box" src="images/box_locked.png" alt="锁住的宝箱">
+                <input type="text" id="password-input" placeholder="请输入解锁密语...">
+                <button id="unlock-btn" class="btn">解 锁</button>
+                <p id="hint-text">（提示：那句经典台词是什么来着？）</p>
+            </div>
+            <button class="back-btn">返回首页</button>
+        </div>
+
+        <!-- 奖励页 -->
+        <div id="reward-page" class="page">
+            <div class="card reward-card">
+                <h2>🎉 恭喜！你解锁了神秘大礼！🎉</h2>
+                <img src="images/box_open.png" alt="打开的宝箱" class="reward-image">
+                <h3>这是我们为你准备的生日奖励！</h3>
+                <div class="reward-content">
+                    <p><strong>【电影通兑券】一张</strong></p>
+                    <p>用它来开启新一岁的奇妙旅程吧！</p>
+                    <p>来找我兑换哦~祝你观影愉快！</p>
+                </div>
+            </div>
+            <button class="back-btn">返回首页</button>
+        </div>
+
+    </div>
+
+    <!-- 创意升级：添加一个彩带库 -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
