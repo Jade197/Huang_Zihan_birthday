@@ -84,3 +84,17 @@ body {
 #music-toggle-btn { background-color: rgba(255, 255, 255, 0.9); border: none; padding: 10px 15px; border-radius: 50px; cursor: pointer; font-family: inherit; font-size: 0.9em; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
 .trail { position: absolute; width: 24px; height: 24px; background-image: url('images/trail.png'); background-size: contain; pointer-events: none; transform: translate(-50%, -50%); animation: fadeOut 0.5s forwards; z-index: 1000; }
 @keyframes fadeOut { to { opacity: 0; transform: translate(-50%, -50%) scale(0.5); } }
+/* 脚注暖心话样式 */
+.footnote {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #ddd; /* 加一条虚线，与上方内容做区隔 */
+    width: 100%;
+}
+
+.footnote p {
+    font-size: 0.9em;       /* 字体稍小 */
+    color: #888;            /* 颜色更柔和，不抢眼 */
+    line-height: 1.7;       /* 行高舒适 */
+    margin-bottom: 5px;     /*段落间距*/
+}
